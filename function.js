@@ -12,7 +12,11 @@ function maskNumber(input) {
 
 function getAverage(input_array) {
     var array = input_array;
-    var avg = parseFloat((array[0]+array[1]+array[2]+array[3]+array[4]+array[5])/6)
+    var sum = 0;
+    for(var i in array){
+        sum = sum + array[i];
+        var avg = parseFloat(sum/6)
+    }
     return avg;
 }
 
